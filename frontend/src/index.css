@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f6f8ff;
+  margin: 0;
+  color: #1e293b;
+}
+
+/* Page */
+.page {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  padding: 22px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.12);
+}
+
+/* Headings */
+h2, h3 {
+  color: #4f46e5;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #f9faff;
+  border-radius: 10px;
+  border: 1px solid #dbeafe;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Button */
+button {
+  background: linear-gradient(135deg, #4f46e5, #60a5fa);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(96, 165, 250, 0.45);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th {
+  background: #eef2ff;
+  color: #1e293b;
+  font-weight: 600;
+}
+
+td, th {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Row hover */
+tr:hover {
+  background-color: #f1f5ff;
+}
+
+/* Delete button */
+td button {
+  background: #f87171;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+td button:hover {
+  background: #ef4444;
+}
+
+
+
+/* EDIT BUTTON */
+.edit-btn {
+  background: linear-gradient(135deg, #22c55e, #4ade80) !important;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: linear-gradient(135deg, #16a34a, #22c55e) !important;
+  box-shadow: 0 8px 18px rgba(74, 222, 128, 0.45);
+}
+
+/* PAGE */
+.page {
+  padding: 30px;
+  background: #f4f7ff;
+  min-height: 100vh;
+}
+
+/* ATTENDANCE CARD */
+.attendance-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 20px;
+  margin: 12px auto;
+  max-width: 600px;
+
+  background: white;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* STUDENT NAME */
+.attendance-card span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* BUTTON AREA */
+.attendance-card div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* BUTTONS */
+.attendance-card button {
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* PRESENT */
+.attendance-card button:first-child {
+  background: #22c55e;
+  color: white;
+}
+
+.attendance-card button:first-child:hover {
+  background: #16a34a;
+}
+
+/* ABSENT */
+.attendance-card button:nth-child(2) {
+  background: #ef4444;
+  color: white;
+}
+
+.attendance-card button:nth-child(2):hover {
+  background: #dc2626;
+}
+
+/* STATUS TEXT */
+.attendance-card small {
+  margin-left: 10px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+}
+
+.present {
+  color: green;
+  font-weight: 600;
+}
+.absent {
+  color: red;
+  font-weight: 600;
+}
+
+/* PAGE STYLING */
+.page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f0f4f8, #d9e2ec);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* HEADINGS */
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #1f2937;
+  font-size: 2rem;
+  animation: slideDown 0.8s ease;
+}
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #334155;
+}
+
+/* CARD STYLING */
+.card {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* TABLE STYLING */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeIn 1s ease forwards;
+}
+
+thead {
+  background: #0f172a;
+  color: #fff;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+tbody tr {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+tbody tr:hover {
+  background: #f1f5f9;
+  transform: translateX(5px);
+}
+
+/* ATTENDANCE COLORS */
+.present {
+  color: #16a34a; /* green */
+  font-weight: bold;
+}
+
+.absent {
+  color: #dc2626; /* red */
+  font-weight: bold;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}

@@ -1,0 +1,65 @@
+.page {
+  padding: 30px;
+  background-color: #f4f7fb;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Inputs */
+input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 1px solid #dfe6e9;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+}
+
+/* Button */
+button {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #6c5ce7, #5a4bdc);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(108, 92, 231, 0.35);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+td, th {
+  padding: 12px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+th {
+  background-color: #f2f3ff;
+  color: #2d3436;
+  font-weight: 600;
+}
