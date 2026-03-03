@@ -8,6 +8,7 @@ export default function Attendance() {
   const [stars, setStars] = useState([]);
   const date = new Date().toISOString().split("T")[0];
 
+  // Load students and attendance from localStorage
   useEffect(() => {
     const savedStudents = JSON.parse(localStorage.getItem("students")) || [];
     const savedAttendance = JSON.parse(localStorage.getItem("attendance")) || {};
@@ -15,7 +16,7 @@ export default function Attendance() {
     setStudents(savedStudents);
     setAttendance(savedAttendance);
 
-    // Stable grid layout
+    // Calculate stable grid positions
     const pos = {};
     const cols = 4;
     const spacingX = 18;
@@ -24,7 +25,6 @@ export default function Attendance() {
     savedStudents.forEach((s, index) => {
       const row = Math.floor(index / cols);
       const col = index % cols;
-
       pos[s.id] = {
         top: 20 + row * spacingY + "%",
         left: 20 + col * spacingX + "%",
@@ -34,15 +34,21 @@ export default function Attendance() {
     setPositions(pos);
   }, []);
 
+  // Save students whenever they change
+  useEffect(() => {
+    localStorage.setItem("students", JSON.stringify(students));
+  }, [students]);
+
+  // Save attendance whenever it changes
+  useEffect(() => {
+    localStorage.setItem("attendance", JSON.stringify(attendance));
+  }, [attendance]);
+
   // Play sound based on status
   const playSound = (status) => {
     let audio;
-
-    if (status === "Present") {
-      audio = new Audio("/click.mp3"); // your star sound
-    } else if (status === "Absent") {
-      audio = new Audio("/cross.mp3"); // cross sound
-    }
+    if (status === "Present") audio = new Audio("/click.mp3");
+    else if (status === "Absent") audio = new Audio("/cross.mp3");
 
     if (audio) {
       audio.volume = 0.5;
@@ -50,18 +56,14 @@ export default function Attendance() {
     }
   };
 
+  // Handle click on a student
   const handleClick = (id) => {
     const currentStatus = attendance[date]?.[id];
-
     let newStatus = currentStatus;
 
-    if (!currentStatus) {
-      newStatus = "Present";
-    } else if (currentStatus === "Present") {
-      newStatus = "Absent";
-    } else if (currentStatus === "Absent") {
-      return; // stay Absent
-    }
+    if (!currentStatus) newStatus = "Present";
+    else if (currentStatus === "Present") newStatus = "Absent";
+    else if (currentStatus === "Absent") return;
 
     const updated = {
       ...attendance,
@@ -72,7 +74,6 @@ export default function Attendance() {
     };
 
     setAttendance(updated);
-    localStorage.setItem("attendance", JSON.stringify(updated));
 
     // Flying star only for Present
     if (newStatus === "Present") {
@@ -88,7 +89,7 @@ export default function Attendance() {
       }, 1500);
     }
 
-    // Play sound for Present or Absent
+    // Play sound
     playSound(newStatus);
   };
 
